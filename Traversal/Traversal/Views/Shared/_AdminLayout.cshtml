@@ -1,0 +1,33 @@
+﻿@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr"
+	  class="light-style layout-menu-fixed"
+	  dir="ltr"
+	  data-theme="theme-default"
+	  data-assets-path="../assets/"
+	  data-template="vertical-menu-template-free">
+@await Html.PartialAsync("/Views/AdminLayoutPartial/AdminHeaderPartial.cshtml")
+<body>
+	<div class="layout-wrapper layout-content-navbar">
+		<div class="layout-container">
+			@await Html.PartialAsync("/Views/AdminLayoutPartial/AdminLayoutNavbar1.cshtml")
+			<div class="layout-page">
+				@await Html.PartialAsync("/Views/AdminLayoutPartial/AdminLayoutNavbar2.cshtml")
+				<div class="content-wrapper">
+					<div class="container-xxl flex-grow-1 container-p-y">
+						@RenderBody()
+					</div>
+				</div>
+				@await Html.PartialAsync("/Views/AdminLayoutPartial/AdminLayoutFooter.cshtml")
+				<div class="content-backdrop fade"></div>
+			</div>
+		</div>
+	</div>
+	<div class="layout-overlay layout-menu-toggle"></div>
+	@await Html.PartialAsync("/Views/AdminLayoutPartial/AdminLayoutScript.cshtml")
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+﻿@{
+	Layout = null;
+}
+
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="tr">
+
+
+@await Html.PartialAsync("/Views/LayoutPartial/HeaderPartial.cshtml")
+<body>
+	<!--header-->
+	@await Html.PartialAsync("/Views/LayoutPartial/NavbarPartial.cshtml")
+
+	<!-- //header -->
+	<!--banner-slider-->
+	<!-- main-slider -->
+	@RenderBody()
+	
+	<!-- /main-slider -->
+	<!-- //banner-slider-->
+	<!--/grids-->
+	
+	<!--//grids-->
+	<!-- stats -->
+	
+	<!-- //stats -->
+	<!--/-->
+	
+	<!-- //testimonials -->
+	<!--/w3l-footer-29-main-->
+	
+	@await Html.PartialAsync("/Views/LayoutPartial/Footer.cshtml")
+
+	<!-- Template JavaScript -->
+	@await Html.PartialAsync("/Views/LayoutPartial/Script.cshtml")
+</body>
+
+</html>
+
+
+

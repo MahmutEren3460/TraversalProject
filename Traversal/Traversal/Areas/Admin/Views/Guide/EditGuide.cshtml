@@ -1,0 +1,46 @@
+﻿@model EntityLayer.Concrete.Guide
+@{
+    ViewData["Title"] = "EditGuide";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Rehber Düzenleme Sayfası</h2>
+
+<form method="post" enctype="multipart/form-data">
+    @Html.HiddenFor(m => m.GuideID)
+    <div class="form-group">
+        @Html.Label("Ad Soyad")
+        <input type="text" asp-for="Name" class="form-control" />
+        @*<span asp-validation-for="Name" class="text-danger"></span>*@
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Rehber Fotoğraf")
+        <input type="file" asp-for="Image" class="form-control" />
+        @*<span asp-validation-for="Image" class="text-danger"></span>*@
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Instagram Url")
+        <input type="text" asp-for="InstagramUrl" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Twitter Url")
+        <input type="text" asp-for="TwitterUrl" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Rotası")
+        <textarea cols="30" rows="5" class="form-control" asp-for="Descrition"></textarea>
+        @*<span asp-validation-for="Descrition" class="text-danger"></span>*@
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Açıklama")
+        <textarea cols="30" rows="5" class="form-control" asp-for="Description2"></textarea>
+        @*<span asp-validation-for="Descrition" class="text-danger"></span>*@
+    </div>
+    <br />
+    <button class="btn btn-outline-primary">Düzenle</button>
+</form>

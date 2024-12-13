@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "37w7SqmUCgBFT+N97hSRUyHqUCVgH2qPVIJh0fYvyMo=",
+  "Source": "SignalRApiForSQL",
+  "BasePath": "_content/SignalRApiForSQL",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

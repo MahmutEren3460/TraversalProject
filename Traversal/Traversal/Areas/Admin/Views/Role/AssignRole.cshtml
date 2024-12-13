@@ -1,0 +1,60 @@
+﻿@using DTOLayer.DTOs.RolesDTOs;
+@model List<RoleAssignDTO>
+@{
+    ViewData["Title"] = "AssignRole";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <div class="card shadow-lg p-5 border-0">
+        <h4 class="mb-4 text-center">Rolleri Güncelle</h4>
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <div class="form-check custom-control custom-checkbox mb-4">
+                <input type="hidden" asp-for="@Model[i].RoleId" />
+                <input type="hidden" asp-for="@Model[i].RoleName" />
+                <input type="checkbox" asp-for="@Model[i].RoleExist" class="custom-control-input" id="role_@i" />
+                <label class="custom-control-label" for="role_@i">@Model[i].RoleName</label>
+            </div>
+        }
+        <button class="btn btn-primary btn-lg w-100">Değişiklikleri Kaydet</button>
+    </div>
+</form>
+
+<!-- Add custom CSS to further enhance the design -->
+<style>
+    .form-check.custom-control {
+        font-size: 1.1rem;
+    }
+
+    .form-check.custom-control-input:checked ~ .custom-control-label::before {
+        background-color: #5c6bc0;
+        border-color: #5c6bc0;
+    }
+
+    .form-check.custom-control-input:focus ~ .custom-control-label::before {
+        border-color: #5c6bc0;
+    }
+
+    .form-check.custom-control-input:checked ~ .custom-control-label {
+        color: #5c6bc0;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+    .card {
+        border-radius: 15px;
+    }
+</style>
+
+
+
+

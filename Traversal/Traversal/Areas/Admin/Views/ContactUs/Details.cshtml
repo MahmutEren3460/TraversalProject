@@ -1,0 +1,37 @@
+﻿@model ContactUs
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0">
+        <div class="card-body">
+            <h5 class="card-subtitle mb-3 text-muted">Gönderen Bilgileri</h5>
+            <div class="mb-2">
+                <strong>Gönderen:</strong> @Model.Name
+            </div>
+            <div class="mb-2">
+                <strong>Mail:</strong> @Model.Mail
+            </div>
+            <div class="mb-2">
+                <strong>Konu:</strong> @Model.Subject
+            </div>
+            <div class="mb-2">
+                <strong>Tarih:</strong> @Model.MessageDate.ToString("dd-MMM-yyyy")
+            </div>
+            <hr />
+            <h5 class="card-subtitle mb-3 text-muted">Mesaj İçeriği</h5>
+            <p class="card-text">
+                @Model.MessageBody
+            </p>
+        </div>
+        <div class="card-footer bg-light d-flex justify-content-between">
+            <a href="@Url.Action("Index", "ContactUs", new { area = "Admin" })" class="btn btn-outline-secondary">Geri Dön</a>
+            <div>
+                <a href="@Url.Action("Delete", "ContactUs", new { area = "Admin", id = Model.ContactUsID })" class="btn btn-outline-danger">Sil</a>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,56 @@
+﻿@using Traversal.Areas.Admin.Models;
+@model IEnumerable<BookingHotelSearchViewModel.Result>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+    double score;
+}
+
+
+<h2>Booking Otel Rezervasyon Sayfası</h2>
+<h3>Arama Yapılan Şehir: @ViewBag.CityName</h3>
+
+<form method="post" action="/Admin/BookingHotelSearch/GetCityID">
+    <label>Şehir adını Giriniz</label>
+    <input type="text" class="form-control" name="p" />
+    <br />
+    <button class="btn btn-outline-primary">Şehir Getir</button>
+</form>
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>#</th>
+        <th>Otel Adı</th>
+        <th>Otel Puanı</th>
+        <th>Otel Değerlendirmesi</th>
+        <th>Detaylar</th>
+    </tr>
+    @if (Model != null)
+    {
+        count = 0;
+        foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.name</td>
+                @{
+                    score = double.Parse(item.reviewScore.ToString()) / 10;
+                    var reviewScoreWordTranslated = item.reviewScoreWord switch
+                    {
+                        "Very good" => "Çok İyi",
+                        "Good" => "İyi",
+                        "Superb" => "Süper",
+                        "Fabulous" => "Harika",
+                        "Exceptional" => "Olağanüstü",
+                        _ => "Değerlendirme Yok"
+                    };
+                }
+                <td>@score</td>
+                <td>@reviewScoreWordTranslated</td>
+                <td><a href="#" class="btn btn-outline-dark">Detaylar</a></td>
+            </tr>
+        }
+    }
+</table>

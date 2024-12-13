@@ -1,0 +1,35 @@
+﻿@using DTOLayer.DTOs.AccountDTOs;
+@model AccountDTO
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Unit Of Work Personel Prim Transferi</h3>
+
+<form method="post">
+    <label>Gönderen</label>
+    <input type="text" asp-for="SenderID" class="form-control" />
+    <br />
+
+    <label>Alıcı</label>
+    <select asp-for="ReceiverID" class="form-control" asp-items="ViewBag.Receivers">
+        <option value="">Seçiniz</option>
+    </select>
+    <br />
+
+    <label>Miktar</label>
+    <input type="text" asp-for="Amount" class="form-control" />
+    <br />
+
+    <button class="btn btn-outline-warning">Hesaba Aktar</button>
+</form>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Message"]
+    </div>
+}
+
+
