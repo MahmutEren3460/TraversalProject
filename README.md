@@ -42,7 +42,7 @@
 </br>
 <h2>Üye Panel Görselleri</h2>
 <img src="https://i.hizliresim.com/i1q1xvi.png">
-<img src="https://i.hizliresim.com/p03c0fz.png">
+<img src="https://i.hizliresim.com/tbmirbs.png">
 <img src="https://i.hizliresim.com/mrjx9to.png">
 </br>
 <h2>Admin Panel Görselleri</h2>
