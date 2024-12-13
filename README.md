@@ -5,14 +5,12 @@
 <p>• Rotalara bakabilir ve rotalar hakkında yaazılan makaleleri okuyabilirsiniz</p>
 <p>• Makaleler hakkında yorum yapabilir ve düşünceleriniz paylaşabilirsiniz</p>
 <p>• Beğendiğiniz rotaya rezervasyon yapabilirsiniz</p>
-</br>
 <h3>Üye Paneli</h3>
 <p>• Kullanıcı kendisi hakkında istatiklere ulaşabilir</p>
 <p>• Son eklenen rotaları hakkında bilgi alabilir</p>
 <p>• Rehberler hakkında bilgi edinebilir</p>
 <p>• Çoklu dil desteği ile tercih ettiği dil ile kullanabilir</p>
 <p>• Onay Bekleyen/Onaylanan/Geçmiş ve İptal olmuş rezervasyonları listeleyebilir</p>
-</br>
 <h3>Admin Paneli</h3>
 <p>• Admin site hakkında istatiklere ulaşabilir</p>
 <p>• Yeni rota ekleyebilir,silebilir veya güncelleyebilir</p>
@@ -22,7 +20,6 @@
 <p>• Üye tarafında oluşturan rezervasyon durumunu güncelleyebilir</p>
 <p>• Mail gönderebilir ve kendisine gelen mailleri görüntüleyebilir</p>
 <p>• Kullanıcılara,Adminlere ve Moderatörlere rol atayabilir ve yeni rol oluşturabilir</p>
-</br>
 <h3>Kullanılan teknolojiler</h3>
 <p>• Asp.Net Core 6.0</p>
 <p>• Entity Framework Core</p>
